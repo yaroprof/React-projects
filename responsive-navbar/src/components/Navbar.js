@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import './Navbar.css';
 
 const Navbar = () => {
-  const [click, setClick] = React.useState(false)
-  const handleClick = () => setClick(!click)
+  const [click, setClick] = React.useState(false);
+  const handleClick = () => setClick(!click);
 
   return (
     <>
@@ -25,7 +26,41 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/about"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}>
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/blog"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}>
+                Blog
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/contact"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}>
+                Contact Us
+              </NavLink>
+            </li>
           </ul>
+          {/* nav-icon */}
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
+          </div>
         </div>
       </nav>
     </>
