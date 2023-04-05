@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Here is the corrected summary of the components and files in the 14-cart/final project:
 
-### `index.js` is the entry point of the application and renders the App component. It also sets up the React and ReactDOM libraries to render the application in the browser.
+`index.js` is the entry point of the application and renders the App component. It also sets up the React and ReactDOM libraries to render the application in the browser.
 
 ### `App.js` is the root component of the application and renders the Navbar and CartContainer components. It also creates a CartContext using the useReducer hook and passes it to the CartContainer component as a prop.
 
