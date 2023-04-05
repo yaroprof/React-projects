@@ -1,5 +1,5 @@
 
-# Here is the corrected summary of the components and files in the 14-cart/final project:
+# Here is the corrected summary of the components and files in the project:
 
 ### `index.js` 
 is the entry point of the application and renders the App component. It also sets up the React and ReactDOM libraries to render the application in the browser.
@@ -25,7 +25,7 @@ is a file that exports an array of product data used in the application. Each pr
 ### `reducer.js` 
 is a file that exports a reducer function used to manage the state of the shopping cart. This function takes the current state and an action object as arguments and returns the new state based on the type of action.
 
-The interaction between these components and files is as follows:
+## The interaction between these components and files is as follows:
 
 ### `index.js` 
 renders the App component.
