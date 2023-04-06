@@ -1,10 +1,20 @@
+import React from 'react';
+// import { useGlobalContext } from './context';
 
-import './App.css';
+import Navbar from './components/Navbar';
+import CartContainer from './components/CartContainer';
 
 function App() {
   return (
     <div className="App">
-      TEST
+      {/* <div className="loading">
+        <h1>Loading...</h1>
+      </div> */}
+
+      <main>
+        <Navbar />
+        <CartContainer />
+      </main>
     </div>
   );
 }
