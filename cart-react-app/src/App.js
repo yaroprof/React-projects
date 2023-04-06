@@ -3,6 +3,7 @@ import React from 'react';
 
 import Navbar from './components/Navbar';
 import CartContainer from './components/CartContainer';
+import { AppProvider } from './context';
 
 function App() {
   return (
@@ -12,8 +13,10 @@ function App() {
       </div> */}
 
       <main>
-        <Navbar />
-        <CartContainer />
+        <AppProvider>
+          <Navbar />
+          <CartContainer />
+        </AppProvider>
       </main>
     </div>
   );
