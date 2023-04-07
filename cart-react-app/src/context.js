@@ -8,13 +8,39 @@ const AppContext = React.createContext();
 // create initialState
 const initialState = {
   cart: cartItems,
+  loading: false,
+  total: 0, 
+  amount: 0
   // Add any other properties you need in the initial state
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  return <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>;
+  const clearCart = (id) => {
+    dispatch({ type: 'CLEAR_CART', payload: id })
+  }
+
+  const remove = (id) =>{
+    dispatch({ type: 'REMOVE', payload: id })
+  }
+
+  const increase = (id) => {
+    dispatch({ type: 'INCREASE', payload: id })
+  }
+
+
+  return <AppContext.Provider 
+  value={{
+     ...state,
+     remove,
+     clearCart,
+     increase,
+    //  decrease
+    
+    }}
+  >{children}
+  </AppContext.Provider>;
 };
 
 export const useGlobalContext = () => {
