@@ -21,7 +21,7 @@ const CartContainer = () => {
         <footer>
           <hr />
           <div className="cart-total">
-            <h4>Total <span>total {total}</span></h4>
+            <h4>Total <span>${total}</span></h4>
           </div>
           <button onClick={clearCart} className="btn clear-btn">clear cart</button>
         </footer>
