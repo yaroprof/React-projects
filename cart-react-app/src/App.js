@@ -3,22 +3,23 @@ import React from 'react';
 
 import Navbar from './components/Navbar';
 import CartContainer from './components/CartContainer';
-import { AppProvider } from './context';
+// import { AppProvider } from './context';
 
 function App() {
-  return (
-    <div className="App">
-      {/* <div className="loading">
-        <h1>Loading...</h1>
-      </div> */}
+  // const { loading } = useGlobalContext();
+  // if (loading) {
+  //   return (
+  //     <div className="loading">
+  //       <h1>Loading...</h1>
+  //     </div>
+  //   );
+  // }
 
-      <main>
-        <AppProvider>
-          <Navbar />
-          <CartContainer />
-        </AppProvider>
-      </main>
-    </div>
+  return (
+    <main>
+      <Navbar />
+      <CartContainer />
+    </main>
   );
 }
 

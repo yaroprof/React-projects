@@ -56,6 +56,15 @@ const reducer = (state, action) => {
     return { ...state, total, amount };
   }
 
+
+  if (action.type === 'LOADING') {
+    return{ ...state, loading: true }
+  }
+
+  if (action.type === 'DISPLAY_ITEMS') {
+    return { ...state, cart: action.payload, loading: false }
+  }
+
   // Total Amount
 
   if (action.type === 'TOGGLE_AMOUNT') {
@@ -65,13 +74,18 @@ const reducer = (state, action) => {
           if (action.payload.type === 'inc') {
             return { ...cartItem, amount: cartItem.amount + 1 };
           }
+          if (action.payload.type === 'dec') {
+            return { ...cartItem, amount: cartItem.amount - 1}
+          }
         }
         return cartItem;
       })
       .filter((cartItem) => cartItem.amount !== 0);
     return { ...state, cart: tempCart };
   }
+  throw new Error('no matching action type')
 };
+
 export default reducer;
 
 // ---> So, in summary, the payload property is used to carry some additional data with the action object that can be used by the reducer function to determine what kind of update to perform on the state.
