@@ -54,6 +54,7 @@ const App = () => {
           })}
         </div>
         {/* job-info */}
+        
         <article className="job-info">
           <h3>{name}</h3>
           <h3>{username}</h3>
@@ -64,11 +65,15 @@ const App = () => {
             return (
               <div key={index} className="job-desc">
                 <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                
                 <p>{location.city}</p>
               </div>
             );
           })}
-        </article>
+        </article>  
+
+
+        
       </div>
     </section>
   );
