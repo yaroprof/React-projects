@@ -33,7 +33,7 @@ const App = () => {
 
 
  const {company, dates, duties, title} = jobs[value]                                                                                                                                         
-  // const {name, username } = jobs[value]
+
   return (
     <section className="section">
       <div className="title">
