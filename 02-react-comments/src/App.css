@@ -1,0 +1,33 @@
+/* App.css */
+.comments-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки з однаковою шириною */
+  gap: 20px; /* Проміжок між елементами */
+  padding: 20px;
+}
+
+.comments-list h1 {
+  grid-column: 1 / -1; /* Розтягнути заголовок на всю ширину */
+}
+
+.comments-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comments-list li {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.comments-list li strong {
+  font-weight: bold;
+}
+
+.comments-list p {
+  margin: 0;
+}
+
+.comments-list p:last-child {
+  margin-top: 10px;
+}

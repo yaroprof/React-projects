@@ -1,0 +1,19 @@
+.counterBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: grey;
+  font-size: 2rem;
+}
+
+.btn{
+  font-size: 2rem;
+  color: #fff;
+  background-color: #13137a;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
