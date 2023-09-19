@@ -356,6 +356,7 @@ export default SingleProduct;
 ```js
 import { Link } from 'react-router-dom';
 import products from '../data';
+
 const Products = () => {
   return (
     <section className='section'>
@@ -384,8 +385,10 @@ export default Products;
 ```js
 import { Link, useParams } from 'react-router-dom';
 import products from '../data';
+
 const SingleProduct = () => {
   const { productId } = useParams();
+  
   const product = products.find((product) => product.id === productId);
   const { image, name } = product;
 
