@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 import Hero from '../../components/Hero';
 import ProductCard from '../../components/ProductCard';
-import FeatureCard from '../../components/FeatureCard';
+import Categories from '../../components/Categories';
+// import FeatureCard from '../../components/FeatureCard';
 // import Features from '../../components/FeatureCard';
 import Stats from '../../components/StatCard';
-import Footer from '../../components/Footer';
-import Products from '../Products';
+// import Footer from '../../components/Footer';
+// import Products from '../Products';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -15,13 +16,14 @@ const Home = () => {
       const response = await fetch('https://fakestoreapi.com/products?limit=12');
       const data = await response.json();
       setProducts(data)
-    };
+    };     
     fetchProducts();
   }, []);
 
   return (
     <>
       <Hero />
+      <Categories />
       <div className="flex flex-col text-center w-full mt-20">
         <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
           PRODUCTS
@@ -30,11 +32,10 @@ const Home = () => {
           MOST POPULAR PRODUCTS
         </h1>
       </div>
+
       {products.length > 0 ?
       <ProductCard products = {products} /> : <div>Loading...</div>}
       {/* <Products /> */}
-      <FeatureCard />
-      
       <Stats />
 
     </>

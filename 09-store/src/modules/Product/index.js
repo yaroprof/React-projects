@@ -15,6 +15,11 @@ const Product = () => {
     fetchProduct();
   }, [id]);
 
+  const handleCart = (product) => {
+    console.log( product );
+    product.map((  ) => )
+  }
+
   if (!Object.keys(product).length > 0) return <div>...Loading</div>;
   // !Object.keys(product).length > 0 && <div>Product Not Found</div>;
 
@@ -145,7 +150,7 @@ const Product = () => {
                       stroke="currentColor"
                       strokeWidth="round"
                       strokeLinejoin="round"
-                      strokeWidth="2"
+                      // strokeWidth="2"
                       className="w-4 h-4"
                       viewBox="0 0 24 24">
                       <path d="M6 9l6 6 6-6"></path>
@@ -163,8 +168,8 @@ const Product = () => {
                   Buy it now
                 </button>
 
-                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 hover:text-white rounded">
-                  Add
+                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 hover:text-white rounded" onClick={() => handleCart(product)}>
+                  Add to cart
                 </button>
 
               </div>
@@ -174,7 +179,7 @@ const Product = () => {
                   fill="currentColor"
                   strokeWidth="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  // strokeWidth="2"
                   className="w-5 h-5"
                   viewBox="0 0 24 24">
                   <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
