@@ -54,7 +54,7 @@ const Count = styled.span`
 `;
 
 
-const ProductCard = ({}) => {
+const ProductCard = ({ product }) => {
     const [likes, setLikes] = useState(0);
     const [comments, setComments] = useState([]);
 
@@ -66,13 +66,13 @@ const ProductCard = ({}) => {
         const comment = prompt('Enter your name')
             if (comment){
                 setComments([...comments, comment])
-            }
         }
     }
   
 
-    return(
+    return (
         <Card>
+            <Image src={product.image} alt={product.title} />
             <Actions>
                 <Button></Button>
                 <Button></Button>
@@ -80,13 +80,8 @@ const ProductCard = ({}) => {
             </Actions>
         </Card>
     )
+
 }
-
-
-
-
-
-
 
 
 
